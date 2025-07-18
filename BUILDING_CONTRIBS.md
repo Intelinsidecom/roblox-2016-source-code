@@ -104,9 +104,19 @@ To build as a `.DLL`, no changes are needed — just build it.
 
 ### 🌄 Mesa (Optional)
 
-**W.I.P.** *(Work In Progress)*
+1. Go to `<your path>\<your folder name>\RCCService\Mesa-7.8.1\lib\windows\VC\mesa`
 
----
+2. Open the soliution and change its Platform Toolset to V110 for every solution there is
+	(Project/Properties/Configuration Properties/General)
+3. Open C/C++ and General and make sure every solution has Debug Information Format set to "Program Database (/Zi)
+
+4. Now go to (Linker/Debugging) and make sure Generate Debug Info is turned on for every solution (Yes (/DEBUG)
+
+5. Now build  "glu" and "gdi" solutions for the debug files to generate
+
+6. Once done go to `<your path>\<your folder name>\RCCService\Mesa-7.8.1\lib\windows\VC\mesa\Debug` and copy every single file
+	Then paste them in `<your path>\<your folder name>\RCCService\Mesa-7.8.1\lib\Debug`
+
 
 ✅ **That's it — you've compiled the contrib libraries!**  
 
